@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Songs</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="dev.css">
+		<link rel="stylesheet" href="popup.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon.webp">
+	</head>
+	<body>
+		<div id="background-imageContainer">
+			<img src="" id="bImage">
+		</div>
+		<header>
+			<h1>ETHABEATZ</h1>
+		</header>
+		<div id="playOptions" class="topOptions">
+			<div class="changeStylesContext">
+				<img src="images/play.png" class="changeStyles" onClick="playAll();">
+			</div>
+			<div class="stylesMenuDivider"></div>
+			<div class="changeStylesContext">
+				<img src="images/shuffle.png" class="changeStyles" onClick="shuffleAll();">
+			</div>
+		</div>
+		<div id="changeStylesMenu" class="topOptions">
+			<div class="changeStylesContext">
+				<img src="images/grid.png" class="changeStyles" onClick="grid();" id="gridPhoto">
+			</div>
+			<div class="stylesMenuDivider"></div>
+			<div class="changeStylesContext">
+				<img src="images/list.png" class="changeStyles" onClick="list();" id="listPhoto">
+			</div>
+		</div>
+		<nav>
+			<p><a href="index.html">Home</a></p>
+			<p><a href="songs.html">Songs</a></p>
+			<p><a href="playlists.html">Playlists</a></p>
+			<p><a href="artists.html">Artists</a></p>
+			<p><a href="../EthaNet_AI/index.html" id="newLink" title="You are about to leave this site" onMouseOver="hover();"onMouseLeave="leave();">ETHANET</a></p>
+			<!--<p><a href="chompoiii.html">CHOMPO III</a></p>-->
+		</nav>
+		<br>
+		<h2>Songs</h2>
+		<div id="top3">
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play1()" width="50" height="50" class="playBot">
+					<img src="images/songs/alone.jpg" class="album" onClick="play1();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual1">
+				</div>
+				<div class="glow">
+					<img src="images/songs/alone.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>Alone</h3>
+					<p>Marshmello</p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play2()" width="50" height="50" class="playBot">
+					<img src="images/songs/far_out.jpg" class="album" onClick="play2();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual2">
+				</div>
+				<div class="glow">
+					<img src="images/songs/far_out.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>FAR OUT - VIP</h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+				<video autoplay loop muted id="foVideo" class="bVideo">
+					<source src="videos/far_out.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play3()" width="50" height="50" class="playBot">
+					<img src="images/songs/crank.jpg" class="album" onClick="play3();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual3">
+				</div>
+				<div class="glow">
+					<img src="images/songs/crank.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>CRANK</h3>
+					<p><a href="artists/CHOMPO.html">CHOMPO</a> & <a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+				<video autoplay loop muted id="crankVideo" class="bVideo">
+					<source src="videos/crank.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play4()" width="50" height="50" class="playBot">
+					<img src="images/songs/ghosty.jpg" class="album" onClick="play4();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual4">
+				</div>
+				<div class="glow">
+					<img src="images/songs/ghosty.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>GHOSTY</h3>
+					<p><a href="artists/CHOMPO.html">CHOMPO</a>, <a href="artists/tokyo_machine.html">Tokyo Machine</a> & <a href="artists/boom_kitty.html">Boom Kitty</a></p>
+				</div>
+				<video autoplay loop muted id="chompVideo" class="bVideo">
+					<source src="videos/chompoiii.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play5()" width="50" height="50" class="playBot">
+					<img src="images/songs/immortal.jpg" class="album" onClick="play5();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual5">
+				</div>
+				<div class="glow">
+					<img src="images/songs/immortal.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>Immortal</h3>
+					<p>Slippy</p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play6()" width="50" height="50" class="playBot">
+					<img src="images/songs/rattlesnake.jpg" class="album" onClick="play6();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual6">
+				</div>
+				<div class="glow">
+					<img src="images/songs/rattlesnake.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>Rattlesnake</h3>
+					<p>Rogue</p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play7()" width="50" height="50" class="playBot">
+					<img src="images/songs/ph4ntom.jpg" class="album" onClick="play7();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual7">
+				</div>
+				<div class="glow">
+					<img src="images/songs/ph4ntom.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>PH4NTOM</h3>
+					<p><a href="artists/CHOMPO.html">CHOMPO</a> and HAUNTY</p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play8()" width="50" height="50" class="playBot">
+					<img src="images/songs/mortals.jpg" class="album" onClick="play8();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual8">
+				</div>
+				<div class="glow">
+					<img src="images/songs/mortals.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>Mortals (Tokyo Machine & Boom Kitty Remix)</h3>
+					<p>Warriyo, <a href="artists/tokyo_machine.html">Tokyo Machine</a> & <a href="artists/boom_kitty.html">Boom Kitty</a></p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play9()" width="50" height="50" class="playBot">
+					<img src="images/songs/knockout.jpg" class="album" onClick="play9();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual9">
+				</div>
+				<div class="glow">
+					<img src="images/songs/knockout.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>KNOCKOUT</h3>
+					<p><a href="artists/CHOMPO.html">CHOMPO</a>, <a href="artists/tokyo_machine.html">Tokyo Machine</a> & MDK</p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play10()" width="50" height="50" class="playBot">
+					<img src="images/songs/watch_out.jpg" class="album" onClick="play10();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual10">
+				</div>
+				<div class="glow">
+					<img src="images/songs/watch_out.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>WATCH OUT!</h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a> & Guy Arthur</p>
+				</div>
+				<video autoplay loop muted id="woVideo" class="bVideo">
+					<source src="videos/watch_out.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play11()" width="50" height="50" class="playBot">
+					<img src="images/songs/hot_shot.jpg" class="album" onClick="play11();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual11">
+				</div>
+				<div class="glow">
+					<img src="images/songs/hot_shot.jpg">
+				</div>
+				<div class="ttrack">
+					<h3 class="title">HOT SHOT <span class="exp">E</span></h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+				<video autoplay loop muted id="htVideo" class="bVideo">
+					<source src="videos/hot_shot.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play12()" width="50" height="50" class="playBot">
+					<img src="images/songs/galactical.jpg" class="album" onClick="play12();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual12">
+				</div>
+				<div class="glow">
+					<img src="images/songs/galactical.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>GALACTICAL</h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+				<video autoplay loop muted id="gVideo" class="bVideo">
+					<source src="videos/galactical.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play13()" width="50" height="50" class="playBot">
+					<img src="images/songs/vg.jpg" class="album" onClick="play13();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual13">
+				</div>
+				<div class="glow">
+					<img src="images/songs/vg.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>Virtual Gaming (Tokyo Machine Remix)</h3>
+					<p>Naeleck, Hige Driver, <a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+				<video autoplay loop muted id="vgVideo" class="bVideo">
+					<source src="videos/vg.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play14()" width="50" height="50" class="playBot">
+					<img src="images/songs/slash.jpg" class="album" onClick="play14();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual14">
+				</div>
+				<div class="glow">
+					<img src="images/songs/slash.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>SLASH</h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play15()" width="50" height="50" class="playBot">
+					<img src="images/songs/powersound.jpg" class="album" onClick="play15();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual15">
+				</div>
+				<div class="glow">
+					<img src="images/songs/powersound.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>POWERSOUND</h3>
+					<p>ELEPS</p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play16()" width="50" height="50" class="playBot">
+					<img src="images/songs/moshi.jpg" class="album" onClick="play16();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual16">
+				</div>
+				<div class="glow">
+					<img src="images/songs/moshi.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>MOSHI</h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play17()" width="50" height="50" class="playBot">
+					<img src="images/songs/stitches.jpg" class="album" onClick="play17();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual17">
+				</div>
+				<div class="glow">
+					<img src="images/songs/stitches.jpg">
+				</div>
+				<div class="ttrack">
+					<h3 class="title">Stitches <span class="exp">E</span></h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a> & Guy Arthur</p>
+				</div>
+				<video autoplay loop muted id="stVideo" class="bVideo">
+					<source src="videos/stitches.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play18()" width="50" height="50" class="playBot">
+					<img src="images/songs/desperate.jpg" class="album" onClick="play18();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual18">
+				</div>
+				<div class="glow">
+					<img src="images/songs/desperate.jpg">
+				</div>
+				<div class="ttrack">
+					<h3 class="title">Desperate <span class="exp">E</span></h3>
+					<p>NEFFIX & <a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play19()" width="50" height="50" class="playBot">
+					<img src="images/songs/heave_ho.jpg" class="album" onClick="play19();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual19">
+				</div>
+				<div class="glow">
+					<img src="images/songs/heave_ho.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>Heave Ho</h3>
+					<p>Boom Kitty & Teminite</p>
+				</div>
+				<video autoplay loop muted id="hhVideo" class="bVideo">
+					<source src="videos/heave_ho.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play20()" width="50" height="50" class="playBot">
+					<img src="images/songs/busted.jpg" class="album" onClick="play20();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual20">
+				</div>
+				<div class="glow">
+					<img src="images/songs/busted.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>BUSTED</h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a>, <a href="artists/boom_kitty.html">Boom Kitty</a> & Teminite</p>
+				</div>
+				<video autoplay loop muted id="buVideo" class="bVideo">
+					<source src="videos/busted.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play21()" width="50" height="50" class="playBot">
+					<img src="images/songs/danger.jpg" class="album" onClick="play21();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual21">
+				</div>
+				<div class="glow">
+					<img src="images/songs/danger.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>Danger</h3>
+					<p>Teminite & <a href="artists/boom_kitty.html">Boom Kitty</a></p>
+				</div>
+				<video autoplay loop muted id="danVideo" class="bVideo">
+					<source src="videos/danger.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play22()" width="50" height="50" class="playBot">
+					<img src="images/songs/dabadabadabadaba.jpg" class="album" onClick="play22();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual22">
+				</div>
+				<div class="glow">
+					<img src="images/songs/dabadabadabadaba.jpg">
+				</div>
+				<div class="ttrack">
+					<h3 class="title">DABADABADABADABA <span class="exp">E</span></h3>
+					<p>Excision & Dion Timmer</p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play23()" width="50" height="50" class="playBot">
+					<img src="images/songs/kurse.jpg" class="album" onClick="play23();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual23">
+				</div>
+				<div class="glow">
+					<img src="images/songs/kurse.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>KURSE OF KHARTOUM</h3>
+					<p><a href="artists/boom_kitty.html">Boom Kitty</a>, Tanger & CHOMPO</p>
+				</div>
+			</div>
+			<div class="track">
+				<div class="album-covers">
+					<img src="images/play.png" onClick="play24()" width="50" height="50" class="playBot">
+					<img src="images/songs/play.jpg" class="album" onClick="play24();">
+					<img src="images/visualizer.gif" class="visualizer" id="visual24">
+				</div>
+				<div class="glow">
+					<img src="images/songs/play.jpg">
+				</div>
+				<div class="ttrack">
+					<h3>PLAY (VIP)</h3>
+					<p><a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				</div>
+				<video autoplay loop muted id="playVideo" class="bVideo">
+					<source src="videos/play.mp4">
+				</video>
+			</div>
+		</div>
+		
+		<!----------------------------------------------------------------------------------------------------------->
+		
+		<div id="player">
+            <img src="images/down.png" class="downArrow" width="32" height="32" onClick="dismissPlayer();">
+			<img src="images/rewind.png" width="30" height="30" onClick="rewind();" class="rewindButton">
+			<img src="images/pause.png" width="30" height="30" onClick="togglePause();" id="playerPause" style="filter: invert(0);">
+            <img src="images/skip.PNG" width="30" height="30" onClick="playNextOnQueue();" class="skipButton">
+			<img src="images/down.PNG" width="30" height="30" onClick="expand();" class="expand" style="rotate: 180deg;">
+		</div>
+		<div id="fullscreen" onClick="full();">
+			<img src="images/fullscreen.png" class="fullscreen" width="22" height="22">
+		</div>
+		<div id="audioTracks">
+			<audio controls id="alone">
+				<source src="media/alone.mp3">
+			</audio>
+			<audio controls id="far_out">
+				<source src="media/far_out.m4a">
+			</audio>
+			<audio controls id="crank">
+				<source src="media/CRANK.mp3">
+			</audio>
+			<audio controls id="ghosty">
+				<source src="media/GHOSTY.mp3">
+			</audio>
+			<audio controls id="immortal">
+				<source src="media/immortal.mp3">
+			</audio>
+			<audio controls id="rattlesnake">
+				<source src="media/rattlesnake.m4a">
+			</audio>
+			<audio controls id="ph4ntom">
+				<source src="media/PH4NTOM.mp3">
+			</audio>
+			<audio controls id="mortals">
+				<source src="media/MORTALS.mp3">
+			</audio>
+			<audio controls id="knockout">
+				<source src="media/KNOCKOUT.mp3">
+			</audio>
+			<audio controls id="watch_out">
+				<source src="media/watch_out.m4a">
+			</audio>
+			<audio controls id="hot_shot">
+				<source src="media/hot_shot.m4a">
+			</audio>
+			<audio controls id="galactical">
+				<source src="media/galactical.m4a">
+			</audio>
+			<audio controls id="vg">
+				<source src="media/vg.m4a">
+			</audio>
+			<audio controls id="slash">
+				<source src="media/slash.m4a">
+			</audio>
+			<audio controls id="powersound">
+				<source src="media/powersound.m4a">
+			</audio>
+			<audio controls id="moshi">
+				<source src="media/moshi.m4a">
+			</audio>
+			<audio controls id="stitches">
+				<source src="media/stitches.m4a">
+			</audio>
+			<audio controls id="desperate">
+				<source src="media/desperate.mp3">
+			</audio>
+			<audio controls id="heave_ho">
+				<source src="media/heave_ho.m4a">
+			</audio>
+			<audio controls id="busted">
+				<source src="media/busted.m4a">
+			</audio>
+			<audio controls id="danger">
+				<source src="media/danger.m4a">
+			</audio>
+			<audio controls id="daba">
+				<source src="media/daba.m4a">
+			</audio>
+			<audio controls id="kurse">
+				<source src="media/kurse.m4a">
+			</audio>
+			<audio controls id="playM">
+				<source src="media/play.m4a">
+			</audio>
+		</div>
+		<div id="song-info">
+			<div class="imageContent">
+				<img src="" id="info-album" width="300" height="300">
+			</div>
+			<div class="InfoContent">
+				<p id="info-title"></p>
+				<p id="info-artist"></p>
+				<img src="images/spotify.png" width="32" height="32">
+				<!--<div class="comingSoon">
+					<p>Other features are coming soon</p>
+				</div>-->
+			</div>
+			<p class="exitInfo" onClick="exitInfo();">Done</p>
+		</div>
+		<div id="fullGUI" onmouseout="hideGUI()">
+			<img src="images/x.png" onClick="exitFull();" width="65" height="65" id="back">
+			<img src="images/pause.png" onClick="togglePause();" width="65" height="65" id="pauseIcon">
+			<img src="images/info.png" width="65" height="65" id="info" onClick="ToggleInfo();">
+		</div>
+		<footer>
+			<p>Thanks to <a href="https://www.youtube.com" target="_blank" id="yT">YouTube</a> for providing the music for this site</p>
+			<p>Thanks to <a href="../EthaNet/index.html" target="_blank">ETHANET</a> for providing this site</p>
+			<p>Version <span id="version"><a href="changelog.html">5</a></span></p>
+			<p style="font-family: Arial, sans-serif;">&copy; 2025</p>
+		</footer>
+		<div class="contextContainer">
+            <div class="contextItem" id="pn">
+                <p onClick="playNext();">Play Next</p>
+            </div>
+            <div class="contextItem" id="aq">
+                <p onClick="addQueue();">Add to Queue</p>
+            </div>
+			<div class="contextItem" id="cq">
+                <p onClick="clearQueue();">Clear Queue</p>
+            </div>
+        </div>
+		<div id="notify">
+			<p id="notifyText"></p>
+		</div>
+		<div id="loadingMsg" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,0.8); color:white; padding:1em 2em; border-radius:10px; z-index:2000;">
+			Loading...
+		</div>
+		<p id="audioTime"></p>
+		<script src="dev.js"></script>
+		<script src="popup.js"></script>
+	</body>
+</html>

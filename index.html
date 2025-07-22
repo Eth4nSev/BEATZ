@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>ETHABEATZ</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="popup.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon.webp">
+	</head>
+	<body>
+		<div id="background-imageContainer">
+			<img src="" id="bImage">
+		</div>
+		<header>
+			<h1>ETHABEATZ</h1>
+		</header>
+		<nav>
+			<p><a href="index.html">Home</a></p>
+			<p><a href="songs.html">Songs</a></p>
+			<p><a href="playlists.html">Playlists</a></p>
+			<p><a href="artists.html">Artists</a></p>
+			<p><a href="../EthaNet_AI/index.html" id="newLink" title="You are about to leave this site" onMouseOver="hover();" onMouseLeave="leave();">ETHANET</a></p>
+			<!--<p><a href="chompoiii.html">CHOMPO III</a></p>-->
+		</nav>
+		<br>
+		<h2><img src="images/play.PNG" width="25" height="25" onClick="playAll()" style="top: -25%; transform: translateY(25%); margin-right: 10px; cursor: pointer;">This Week's Top 3 Songs</h2>
+		<div id="top3">
+			<div class="track">
+				<img src="images/songs/busted.jpg" class="album" onClick="play1();">
+				<div class="glow">
+					<img src="images/songs/busted.jpg">
+				</div>
+				<h3>1. BUSTED</h3>
+				<p><a href="artists/tokyo_machine.html">Tokyo Machine</a>, Teminite & <a href="artists/boom_kitty.html">Boom Kitty</a></p>
+				<video autoplay loop muted id="buVideo" class="bVideo">
+					<source src="videos/busted.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<img src="images/songs/danger.jpg" class="album" onClick="play2();">
+				<div class="glow">
+					<img src="images/songs/danger.jpg">
+				</div>
+				<h3>2. Danger</h3>
+				<p>Teminite & <a href="artists/boom_kitty.html">Boom Kitty</a></p>
+				<video autoplay loop muted id="danVideo" class="bVideo">
+					<source src="videos/danger.mp4">
+				</video>
+			</div>
+			<div class="track">
+				<img src="images/songs/play.jpg" class="album" onClick="play3();">
+				<div class="glow">
+					<img src="images/songs/play.jpg">
+				</div>
+				<h3>3. PLAY (VIP)</h3>
+				<p><a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+				<video autoplay loop muted id="playVideo" class="bVideo">
+					<source src="videos/play.mp4">
+				</video>
+			</div>
+		</div>
+		<hr>
+		<h2>Albums</h2>
+		<div id="albums">
+			<div class="track">
+				<a href="albums/factory_reset/factory_reset.html"><img src="images/albums/factory_reset.jpg" class="albumCover"></a>
+				<div class="glow">
+					<img src="images/albums/factory_reset.jpg">
+				</div>
+				<h3 class="title">Factory Reset - EP</h3>
+				<p><a href="artists/tokyo_machine.html">Tokyo Machine</a></p>
+			</div>
+		</div>
+
+		<!---------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+		<div id="player">
+			<div id="player1" class="player">
+				<img src="images/down.png" class="downArrow" width="32" height="32" onClick="dismissPlayer();">
+				<img src="images/rewind.png" width="30" height="30" onClick="rewind();" class="rewindButton">
+				<audio controls id="track1">
+					<source src="media/busted.m4a">
+				</audio>
+				<img src="images/skip.PNG" width="30" height="30" onClick="playNextOnQueue();" class="skipButton">
+				<a href="https://open.spotify.com/track/5JZTxaNJMHNVZ6vR41UTkM?si=8ce73ed16fbb4b0d" target="_blank"><img src="images/spotify.png" width="32" height="32" class="link" onClick="spotify();"></a>
+				<img src="images/fullscreen.png" class="fullscreen" width="30" height="30" onClick="full();">
+			</div>
+			<div id="player2" class="player">
+				<img src="images/down.png" class="downArrow" width="32" height="32" onClick="dismissPlayer();">
+				<img src="images/rewind.png" width="30" height="30" onClick="rewind();" class="rewindButton">
+				<audio controls id="track2">
+					<source src="media/danger.m4a">
+				</audio>
+				<img src="images/skip.PNG" width="30" height="30" onClick="playNextOnQueue();" class="skipButton">
+				<a href="https://open.spotify.com/track/3W4Kg9woGNvTG0TpR9gJs2?si=13d1665842ab4883" target="_blank"><img src="images/spotify.png" width="32" height="32" class="link" onClick="spotify();"></a>
+				<img src="images/fullscreen.png" class="fullscreen" width="30" height="30" onClick="full();">
+			</div>
+			<div id="player3" class="player">
+				<img src="images/down.png" class="downArrow" width="32" height="32" onClick="dismissPlayer();">
+				<img src="images/rewind.png" width="30" height="30" onClick="rewind();" class="rewindButton">
+				<audio controls id="track3">
+					<source src="media/play.m4a">
+				</audio>
+				<img src="images/skip.PNG" width="30" height="30" onClick="playNextOnQueue();" class="skipButton">
+				<a href="https://open.spotify.com/track/03K9YeLWE900kmpSesDBWe?si=22e9289bc3ea4d95" target="_blank"><img src="images/spotify.png" width="32" height="32" class="link" onClick="spotify();"></a>
+				<img src="images/fullscreen.png" class="fullscreen" width="30" height="30" onClick="full();">
+			</div>
+		</div>
+
+		<div id="fullGUI" onmouseover="showGUI();" onmouseleave="hideGUI();">
+			<img src="images/x.png" onClick="exitFull();" width="65" height="65" id="back">
+			<img src="images/pause.png" onClick="togglePause();" width="65" height="65" id="pauseIcon">
+			<img src="images/info.png" width="65" height="65" id="info" onClick="ToggleInfo();">
+		</div>
+		<div id="song-info">
+			<div class="imageContent">
+				<img src="" id="info-album" width="300" height="300">
+			</div>
+			<div class="InfoContent">
+				<p id="info-title"></p>
+				<p id="info-artist"></p>
+				<img src="images/spotify.png" width="32" height="32">
+			</div>
+			<p class="exitInfo" onClick="exitInfo();">Done</p>
+		</div>
+		<footer>
+			<p>Thanks to <a href="https://www.youtube.com" target="_blank" id="yT">YouTube</a> for providing the music for this site</p>
+			<p>Thanks to <a href="../EthaNet/index.html" target="_blank">ETHANET</a> for providing this site</p>
+			<p>Version <span id="version"><a href="changelog.html">5</a></span></p>
+			<p style="font-family: Arial, sans-serif;">&copy; 2025</p>
+		</footer>
+		<!--<div id="popup">
+			<h2>Welcome to Version 2.0</h2>
+			<h4>New Changes:</h4>
+			<ul>
+				<li>New User Interface</li>
+				<li>New Background Images/Videos when playing songs</li>
+				<li>Can now dismiss the player</li>
+				<li>A spotify icon in the player linked to the song</li>
+				<li>All linked web pages now have something</li>
+				<li>Bug Fixes</li>
+			</ul>
+			<p onClick="dismissPopup();" id="dPopup">Dismiss</p>
+		</div>-->
+		<div class="contextContainer">
+            <div class="contextItem" id="pn">
+                <p onClick="playNext();">Play Next</p>
+            </div>
+            <div class="contextItem" id="aq">
+                <p onClick="addQueue();">Add to Queue</p>
+            </div>
+			<div class="contextItem" id="cq">
+                <p onClick="clearQueue();">Clear Queue</p>
+            </div>
+        </div>
+		<div id="notify">
+			<p id="notifyText"></p>
+		</div>
+		<div id="loadingMsg" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:rgba(0,0,0,0.8); color:white; padding:1em 2em; border-radius:10px; z-index:2000;">
+			Loading...
+		</div>
+		<div id="versionAlert">
+			<div class="dismissVersion">
+				<img src="images/dismissVersion.png" width="45" height="45" onClick="dismissVersion();" id="versionArrow">
+			</div>
+			<h3>Version 5!!</h3>
+			<p>Fullscreen on every track. <a href="changelog.html" style="color: lightblue;">Learn more</a></p>
+		</div>
+		<script src="script.js"></script>
+		<script src="popup.js"></script>
+	</body>
+</html>
